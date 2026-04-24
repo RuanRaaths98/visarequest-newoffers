@@ -284,8 +284,17 @@
               </select>
             </div>
             <div class="form-group full business-only" style="display:none;">
-              <label>Company Name</label>
-              <input type="text" name="company_name" placeholder="Your company / organisation name">
+              <label>Company Name <span class="required">*</span></label>
+              <input type="text" name="company_name" placeholder="Your registered company name">
+            </div>
+            <div class="form-group business-only" style="display:none;">
+              <label>VAT Number</label>
+              <input type="text" name="vat_number" placeholder="e.g. 4123456789">
+              <span class="form-note">Leave blank if not VAT registered.</span>
+            </div>
+            <div class="form-group full business-only" style="display:none;">
+              <label>Business Address <span class="required">*</span></label>
+              <textarea name="business_address" placeholder="Street address, suburb, city, postal code" style="min-height:80px;"></textarea>
             </div>
             <div class="form-group full">
               <label>Please Describe Your Situation <span class="required">*</span></label>
