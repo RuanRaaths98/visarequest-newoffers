@@ -922,6 +922,8 @@ ul { list-style: none; }
 .urgency-feature strong { color: var(--white); display: block; font-size: .95rem; margin-bottom: 4px; }
 .urgency-feature p { font-size: .82rem; color: rgba(255,255,255,.80); }
 
+.emergency-warning { color: rgba(255,255,255,.90); }
+
 /* ── Mobile Nav ─────────────────────────── */
 .mobile-nav {
   display: none; flex-direction: column; gap: 0;
