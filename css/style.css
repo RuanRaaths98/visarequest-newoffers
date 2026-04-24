@@ -493,15 +493,20 @@ ul { list-style: none; }
   box-shadow: 0 12px 40px rgba(0,178,214,.15);
 }
 .service-icon {
-  width: 58px; height: 58px;
-  background: var(--cyan-pale);
-  border-radius: 14px;
+  width: 64px; height: 64px;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--cyan) 100%);
+  border-radius: 18px;
   display: flex; align-items: center; justify-content: center;
-  margin-bottom: 20px;
-  font-size: 1.7rem;
-  border: 1.5px solid rgba(0,178,214,.18);
+  margin-bottom: 24px;
+  box-shadow: 0 6px 20px rgba(0,178,214,.28);
+  flex-shrink: 0;
+  border: none;
 }
-.service-card.emergency .service-icon { background: #fde8e8; border-color: rgba(192,57,43,.2); }
+.service-icon svg { width: 30px; height: 30px; stroke: #fff; fill: none; }
+.service-card.emergency .service-icon {
+  background: linear-gradient(135deg, #7f1d1d 0%, var(--red) 100%);
+  box-shadow: 0 6px 20px rgba(192,57,43,.32);
+}
 .service-card.emergency { border-color: rgba(192,57,43,.25); }
 .service-card h3 { font-size: 1.15rem; margin-bottom: 10px; }
 .service-card p { color: var(--text-lt); font-size: .9rem; flex: 1; margin-bottom: 20px; line-height: 1.6; }
