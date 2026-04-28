@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VisaRequest — Private Visa Consultancy South Africa</title>
-  <meta name="description" content="VisaRequest is a private visa consultancy — not affiliated with any government or embassy. Expert assistance for individuals and businesses.">
+  <meta name="description"
+    content="VisaRequest is a private visa consultancy — not affiliated with any government or embassy. Expert assistance for individuals and businesses.">
   <link rel="icon" href="logos/logo-DYOdxpw0.webp" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <style>
     /* ── Variables ────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:        #050A14;
-      --bg-2:      #080E1C;
-      --blue:      #2358B0;
-      --blue-glow: rgba(35,88,176,0.28);
-      --cyan:      #00B2D6;
-      --cyan-glow: rgba(0,178,214,0.20);
-      --cyan-lt:   #33C8E8;
-      --white:     #FFFFFF;
-      --white-8:   rgba(255,255,255,0.08);
-      --white-12:  rgba(255,255,255,0.12);
-      --white-20:  rgba(255,255,255,0.20);
-      --white-60:  rgba(255,255,255,0.60);
-      --white-80:  rgba(255,255,255,0.80);
-      --red:       #C0392B;
-      --red-glow:  rgba(192,57,43,0.30);
-      --r-lg:      24px;
-      --r-xl:      32px;
-      --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
-      --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html { scroll-behavior: smooth; }
+    :root {
+      --bg: #050A14;
+      --bg-2: #080E1C;
+      --blue: #2358B0;
+      --blue-glow: rgba(35, 88, 176, 0.28);
+      --cyan: #00B2D6;
+      --cyan-glow: rgba(0, 178, 214, 0.20);
+      --cyan-lt: #33C8E8;
+      --white: #FFFFFF;
+      --white-8: rgba(255, 255, 255, 0.08);
+      --white-12: rgba(255, 255, 255, 0.12);
+      --white-20: rgba(255, 255, 255, 0.20);
+      --white-60: rgba(255, 255, 255, 0.60);
+      --white-80: rgba(255, 255, 255, 0.80);
+      --red: #C0392B;
+      --red-glow: rgba(192, 57, 43, 0.30);
+      --r-lg: 24px;
+      --r-xl: 32px;
+      --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -46,9 +57,19 @@
       overflow-x: hidden;
     }
 
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    ul { list-style: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+    }
 
     /* ── Noise overlay ─────────────────────────── */
     .noise {
@@ -65,8 +86,8 @@
     .disclaimer-bar {
       position: relative;
       z-index: 50;
-      background: rgba(0,178,214,0.08);
-      border-bottom: 1px solid rgba(0,178,214,0.18);
+      background: rgba(0, 178, 214, 0.08);
+      border-bottom: 1px solid rgba(0, 178, 214, 0.18);
       padding: 9px 24px;
       text-align: center;
       font-size: 0.76rem;
@@ -74,7 +95,10 @@
       font-weight: 500;
       letter-spacing: 0.01em;
     }
-    .disclaimer-bar strong { color: var(--white); }
+
+    .disclaimer-bar strong {
+      color: var(--white);
+    }
 
     /* ── Floating Pill Nav ─────────────────────── */
     .nav-wrap {
@@ -86,27 +110,42 @@
       padding: 0 24px;
       pointer-events: none;
     }
+
     .nav-pill {
       pointer-events: all;
       display: flex;
       align-items: center;
       gap: 32px;
       padding: 10px 18px 10px 14px;
-      background: rgba(8,14,28,0.72);
+      background: rgba(8, 14, 28, 0.72);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
       border: 1px solid var(--white-12);
       border-radius: 999px;
-      box-shadow: 0 4px 32px rgba(0,0,0,0.4), inset 0 1px 0 var(--white-8);
+      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 var(--white-8);
       transition: box-shadow 0.4s var(--ease-out);
     }
-    .nav-pill:hover {
-      box-shadow: 0 8px 48px rgba(0,0,0,0.5), inset 0 1px 0 var(--white-12);
-    }
-    .nav-logo { display: flex; align-items: center; }
-    .nav-logo img { height: 32px; width: auto; }
 
-    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-pill:hover {
+      box-shadow: 0 8px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 var(--white-12);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo img {
+      height: 32px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
     .nav-links a {
       font-size: 0.83rem;
       font-weight: 500;
@@ -114,7 +153,10 @@
       transition: color 0.25s var(--ease-out);
       white-space: nowrap;
     }
-    .nav-links a:hover { color: var(--white); }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
 
     .nav-emergency-btn {
       display: flex;
@@ -129,13 +171,22 @@
       transition: all 0.3s var(--ease-out);
       animation: pulse-glow 2.5s infinite;
     }
+
     .nav-emergency-btn:hover {
       background: #e74c3c;
       transform: scale(1.04);
     }
+
     @keyframes pulse-glow {
-      0%,100% { box-shadow: 0 0 0 0 rgba(192,57,43,0.5); }
-      50%      { box-shadow: 0 0 0 6px rgba(192,57,43,0); }
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.5);
+      }
+
+      50% {
+        box-shadow: 0 0 0 6px rgba(192, 57, 43, 0);
+      }
     }
 
     .nav-mobile-btn {
@@ -155,38 +206,70 @@
       overflow: hidden;
       pointer-events: none;
     }
+
     .orb {
       position: absolute;
       border-radius: 50%;
       filter: blur(80px);
     }
+
     .orb-1 {
-      width: 600px; height: 600px;
-      right: -100px; top: -100px;
+      width: 600px;
+      height: 600px;
+      right: -100px;
+      top: -100px;
       background: var(--blue-glow);
       animation: drift-1 14s ease-in-out infinite;
     }
+
     .orb-2 {
-      width: 500px; height: 500px;
-      left: -80px; bottom: 10%;
+      width: 500px;
+      height: 500px;
+      left: -80px;
+      bottom: 10%;
       background: var(--cyan-glow);
       animation: drift-2 18s ease-in-out infinite;
     }
+
     .orb-3 {
-      width: 300px; height: 300px;
-      left: 40%; top: 30%;
-      background: rgba(35,88,176,0.12);
+      width: 300px;
+      height: 300px;
+      left: 40%;
+      top: 30%;
+      background: rgba(35, 88, 176, 0.12);
       animation: drift-1 22s ease-in-out infinite reverse;
     }
+
     @keyframes drift-1 {
-      0%,100% { transform: translate(0,0) scale(1); }
-      33%      { transform: translate(30px,-20px) scale(1.06); }
-      66%      { transform: translate(-15px,25px) scale(0.96); }
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      33% {
+        transform: translate(30px, -20px) scale(1.06);
+      }
+
+      66% {
+        transform: translate(-15px, 25px) scale(0.96);
+      }
     }
+
     @keyframes drift-2 {
-      0%,100% { transform: translate(0,0) scale(1); }
-      40%      { transform: translate(-25px,-30px) scale(1.08); }
-      70%      { transform: translate(20px,15px) scale(0.94); }
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      40% {
+        transform: translate(-25px, -30px) scale(1.08);
+      }
+
+      70% {
+        transform: translate(20px, 15px) scale(0.94);
+      }
     }
 
     /* ── Container ─────────────────────────────── */
@@ -204,39 +287,54 @@
       transform: translateY(40px);
       filter: blur(6px);
       transition: opacity 0.85s var(--ease-spring),
-                  transform 0.85s var(--ease-spring),
-                  filter 0.85s var(--ease-spring);
+        transform 0.85s var(--ease-spring),
+        filter 0.85s var(--ease-spring);
       will-change: transform, opacity;
     }
+
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
       filter: blur(0);
     }
-    .reveal-delay-1 { transition-delay: 0.10s; }
-    .reveal-delay-2 { transition-delay: 0.20s; }
-    .reveal-delay-3 { transition-delay: 0.32s; }
-    .reveal-delay-4 { transition-delay: 0.44s; }
+
+    .reveal-delay-1 {
+      transition-delay: 0.10s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.20s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.32s;
+    }
+
+    .reveal-delay-4 {
+      transition-delay: 0.44s;
+    }
 
     /* ── Double-bezel card ─────────────────────── */
     .bezel-outer {
-      background: rgba(255,255,255,0.03);
+      background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--white-8);
       border-radius: var(--r-xl);
       padding: 6px;
     }
+
     .bezel-inner {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
       border-radius: calc(var(--r-xl) - 6px);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
       padding: 28px;
       height: 100%;
       transition: background 0.4s var(--ease-out), border-color 0.4s var(--ease-out);
     }
+
     .bezel-outer:hover .bezel-inner {
-      background: rgba(255,255,255,0.07);
-      border-color: rgba(255,255,255,0.12);
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.12);
     }
 
     /* ── Hero ───────────────────────────────────── */
@@ -259,8 +357,8 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(0,178,214,0.10);
-      border: 1px solid rgba(0,178,214,0.25);
+      background: rgba(0, 178, 214, 0.10);
+      border: 1px solid rgba(0, 178, 214, 0.25);
       color: var(--cyan-lt);
       padding: 5px 14px 5px 8px;
       border-radius: 999px;
@@ -270,15 +368,25 @@
       letter-spacing: 0.18em;
       margin-bottom: 28px;
     }
+
     .hero-eyebrow-dot {
-      width: 6px; height: 6px;
+      width: 6px;
+      height: 6px;
       background: var(--cyan);
       border-radius: 50%;
       animation: blink-dot 2s ease-in-out infinite;
     }
+
     @keyframes blink-dot {
-      0%,100% { opacity: 1; }
-      50%      { opacity: 0.3; }
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.3;
+      }
     }
 
     .hero-h1 {
@@ -289,6 +397,7 @@
       color: var(--white);
       margin-bottom: 24px;
     }
+
     .hero-h1 .accent {
       background: linear-gradient(120deg, var(--cyan-lt) 0%, var(--cyan) 50%, var(--blue) 100%);
       -webkit-background-clip: text;
@@ -326,28 +435,44 @@
       transition: transform 0.3s var(--ease-spring), box-shadow 0.3s var(--ease-spring);
       will-change: transform;
     }
-    .btn-pill:hover  { transform: scale(1.03); }
-    .btn-pill:active { transform: scale(0.98); }
+
+    .btn-pill:hover {
+      transform: scale(1.03);
+    }
+
+    .btn-pill:active {
+      transform: scale(0.98);
+    }
 
     .btn-pill-icon {
-      width: 36px; height: 36px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
       margin-left: 12px;
       transition: transform 0.3s var(--ease-spring);
     }
-    .btn-pill:hover .btn-pill-icon { transform: translate(2px,-1px) scale(1.08); }
+
+    .btn-pill:hover .btn-pill-icon {
+      transform: translate(2px, -1px) scale(1.08);
+    }
 
     .btn-primary-pill {
       background: var(--cyan);
       color: var(--white);
-      box-shadow: 0 4px 24px rgba(0,178,214,0.35);
+      box-shadow: 0 4px 24px rgba(0, 178, 214, 0.35);
     }
+
     .btn-primary-pill:hover {
-      box-shadow: 0 8px 32px rgba(0,178,214,0.50);
+      box-shadow: 0 8px 32px rgba(0, 178, 214, 0.50);
     }
-    .btn-primary-pill .btn-pill-icon { background: rgba(0,0,0,0.18); }
+
+    .btn-primary-pill .btn-pill-icon {
+      background: rgba(0, 0, 0, 0.18);
+    }
 
     .btn-ghost-pill {
       background: var(--white-8);
@@ -355,7 +480,11 @@
       border: 1px solid var(--white-12);
       padding: 12px 20px;
     }
-    .btn-ghost-pill:hover { background: var(--white-12); color: var(--white); }
+
+    .btn-ghost-pill:hover {
+      background: var(--white-12);
+      color: var(--white);
+    }
 
     .btn-red-pill {
       background: var(--red);
@@ -363,8 +492,14 @@
       box-shadow: 0 4px 24px var(--red-glow);
       animation: pulse-glow 2.5s infinite;
     }
-    .btn-red-pill:hover { box-shadow: 0 8px 32px rgba(192,57,43,0.55); }
-    .btn-red-pill .btn-pill-icon { background: rgba(0,0,0,0.20); }
+
+    .btn-red-pill:hover {
+      box-shadow: 0 8px 32px rgba(192, 57, 43, 0.55);
+    }
+
+    .btn-red-pill .btn-pill-icon {
+      background: rgba(0, 0, 0, 0.20);
+    }
 
     /* Hero right — stacked glass cards */
     .hero-cards {
@@ -372,8 +507,9 @@
       flex-direction: column;
       gap: 12px;
     }
+
     .hero-card-item {
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.05);
       border: 1px solid var(--white-8);
       border-radius: 18px;
       padding: 16px 20px;
@@ -383,10 +519,12 @@
       box-shadow: inset 0 1px 0 var(--white-8);
       transition: background 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
     }
+
     .hero-card-item:hover {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(0,178,214,0.25);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(0, 178, 214, 0.25);
     }
+
     .hero-card-label {
       display: flex;
       align-items: center;
@@ -395,33 +533,56 @@
       font-weight: 500;
       color: var(--white-80);
     }
+
     .hero-card-icon {
-      width: 36px; height: 36px;
+      width: 36px;
+      height: 36px;
       border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
     }
-    .hero-card-icon svg { width: 18px; height: 18px; }
-    .hci-blue  { background: rgba(35,88,176,0.30); }
-    .hci-cyan  { background: rgba(0,178,214,0.20); }
-    .hci-red   { background: rgba(192,57,43,0.30); }
+
+    .hero-card-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .hci-blue {
+      background: rgba(35, 88, 176, 0.30);
+    }
+
+    .hci-cyan {
+      background: rgba(0, 178, 214, 0.20);
+    }
+
+    .hci-red {
+      background: rgba(192, 57, 43, 0.30);
+    }
+
     .hero-card-price {
       font-size: 0.88rem;
       font-weight: 700;
       color: var(--cyan-lt);
       font-variant-numeric: tabular-nums;
     }
-    .hero-card-price.emergency { color: #fca5a5; }
+
+    .hero-card-price.emergency {
+      color: #fca5a5;
+    }
 
     .hero-divider {
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--white-12), transparent);
       margin: 4px 0;
     }
+
     .hero-apply-btn {
       width: 100%;
       margin-top: 8px;
     }
+
     .hero-apply-btn .btn-pill {
       width: 100%;
       justify-content: space-between;
@@ -431,35 +592,49 @@
     .trust-strip {
       padding: 20px 0 80px;
     }
+
     .trust-inner {
       display: flex;
       align-items: center;
       gap: 28px;
       flex-wrap: wrap;
     }
+
     .trust-divider {
-      width: 1px; height: 20px;
+      width: 1px;
+      height: 20px;
       background: var(--white-12);
     }
+
     .trust-item {
       display: flex;
       align-items: center;
       gap: 8px;
       font-size: 0.82rem;
-      color: rgba(255,255,255,0.45);
+      color: rgba(255, 255, 255, 0.45);
       font-weight: 500;
     }
+
     .trust-check {
-      width: 16px; height: 16px;
+      width: 16px;
+      height: 16px;
       border-radius: 50%;
-      background: rgba(0,178,214,0.15);
-      display: flex; align-items: center; justify-content: center;
+      background: rgba(0, 178, 214, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
     }
-    .trust-check svg { width: 9px; height: 9px; }
+
+    .trust-check svg {
+      width: 9px;
+      height: 9px;
+    }
 
     /* ── Section base ───────────────────────────── */
-    .section { padding: 100px 0; }
+    .section {
+      padding: 100px 0;
+    }
 
     .eyebrow-tag {
       display: inline-block;
@@ -479,15 +654,25 @@
       color: var(--white);
       margin-bottom: 14px;
     }
+
     .section-sub {
       font-size: 1rem;
       color: var(--white-60);
       line-height: 1.72;
       max-width: 520px;
     }
-    .section-header { margin-bottom: 56px; }
-    .section-header.centered { text-align: center; }
-    .section-header.centered .section-sub { margin: 0 auto; }
+
+    .section-header {
+      margin-bottom: 56px;
+    }
+
+    .section-header.centered {
+      text-align: center;
+    }
+
+    .section-header.centered .section-sub {
+      margin: 0 auto;
+    }
 
     /* ── Services Bento ─────────────────────────── */
     .bento-grid {
@@ -496,13 +681,25 @@
       grid-template-rows: auto auto;
       gap: 16px;
     }
-    .bento-1 { grid-column: 1 / 8; }
-    .bento-2 { grid-column: 8 / 13; }
-    .bento-3 { grid-column: 1 / 6; }
-    .bento-4 { grid-column: 6 / 13; }
+
+    .bento-1 {
+      grid-column: 1 / 8;
+    }
+
+    .bento-2 {
+      grid-column: 8 / 13;
+    }
+
+    .bento-3 {
+      grid-column: 1 / 6;
+    }
+
+    .bento-4 {
+      grid-column: 6 / 13;
+    }
 
     .bento-card {
-      background: rgba(255,255,255,0.03);
+      background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--white-8);
       border-radius: var(--r-xl);
       padding: 36px;
@@ -510,41 +707,69 @@
       flex-direction: column;
       transition: background 0.4s var(--ease-out), border-color 0.4s var(--ease-out), transform 0.4s var(--ease-spring);
       will-change: transform;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
     }
+
     .bento-card:hover {
-      background: rgba(255,255,255,0.06);
-      border-color: rgba(0,178,214,0.22);
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(0, 178, 214, 0.22);
       transform: translateY(-3px);
     }
+
     .bento-card.emergency-card {
-      border-color: rgba(192,57,43,0.25);
-      background: rgba(192,57,43,0.05);
+      border-color: rgba(192, 57, 43, 0.25);
+      background: rgba(192, 57, 43, 0.05);
     }
+
     .bento-card.emergency-card:hover {
-      border-color: rgba(192,57,43,0.45);
-      background: rgba(192,57,43,0.09);
+      border-color: rgba(192, 57, 43, 0.45);
+      background: rgba(192, 57, 43, 0.09);
     }
 
     .bento-icon {
-      width: 52px; height: 52px;
+      width: 52px;
+      height: 52px;
       border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-bottom: 24px;
     }
-    .bento-icon svg { width: 26px; height: 26px; stroke: var(--white); fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
-    .icon-blue { background: linear-gradient(135deg, var(--blue) 0%, #3a70c4 100%); box-shadow: 0 4px 16px rgba(35,88,176,0.35); }
-    .icon-cyan { background: linear-gradient(135deg, #0093b4 0%, var(--cyan) 100%); box-shadow: 0 4px 16px rgba(0,178,214,0.35); }
-    .icon-red  { background: linear-gradient(135deg, #7f1d1d 0%, var(--red) 100%); box-shadow: 0 4px 16px rgba(192,57,43,0.40); }
+
+    .bento-icon svg {
+      width: 26px;
+      height: 26px;
+      stroke: var(--white);
+      fill: none;
+      stroke-width: 1.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .icon-blue {
+      background: linear-gradient(135deg, var(--blue) 0%, #3a70c4 100%);
+      box-shadow: 0 4px 16px rgba(35, 88, 176, 0.35);
+    }
+
+    .icon-cyan {
+      background: linear-gradient(135deg, #0093b4 0%, var(--cyan) 100%);
+      box-shadow: 0 4px 16px rgba(0, 178, 214, 0.35);
+    }
+
+    .icon-red {
+      background: linear-gradient(135deg, #7f1d1d 0%, var(--red) 100%);
+      box-shadow: 0 4px 16px rgba(192, 57, 43, 0.40);
+    }
 
     .bento-label {
       font-size: 0.72rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.16em;
-      color: rgba(255,255,255,0.35);
+      color: rgba(255, 255, 255, 0.35);
       margin-bottom: 8px;
     }
+
     .bento-title {
       font-size: 1.4rem;
       font-weight: 700;
@@ -552,6 +777,7 @@
       color: var(--white);
       margin-bottom: 12px;
     }
+
     .bento-desc {
       font-size: 0.9rem;
       color: var(--white-60);
@@ -559,23 +785,27 @@
       flex: 1;
       margin-bottom: 28px;
     }
+
     .bento-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-top: auto;
     }
+
     .bento-price {
       font-size: 1.5rem;
       font-weight: 800;
       letter-spacing: -0.02em;
       color: var(--white);
     }
+
     .bento-price-note {
       font-size: 0.75rem;
-      color: rgba(255,255,255,0.35);
+      color: rgba(255, 255, 255, 0.35);
       margin-top: 2px;
     }
+
     .bento-link {
       display: flex;
       align-items: center;
@@ -586,16 +816,38 @@
       transition: gap 0.3s var(--ease-spring), color 0.25s;
       white-space: nowrap;
     }
-    .bento-link:hover { gap: 12px; color: var(--white); }
-    .bento-link svg { width: 16px; height: 16px; transition: transform 0.3s var(--ease-spring); }
-    .bento-link:hover svg { transform: translate(2px,-1px); }
+
+    .bento-link:hover {
+      gap: 12px;
+      color: var(--white);
+    }
+
+    .bento-link svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s var(--ease-spring);
+    }
+
+    .bento-link:hover svg {
+      transform: translate(2px, -1px);
+    }
 
     /* Emergency specific */
-    .emergency-card .bento-link { color: #fca5a5; }
-    .emergency-card .bento-price { color: #fca5a5; }
+    .emergency-card .bento-link {
+      color: #fca5a5;
+    }
+
+    .emergency-card .bento-price {
+      color: #fca5a5;
+    }
 
     /* Large bento card layout */
-    .bento-1 .bento-inner { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: end; }
+    .bento-1 .bento-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: end;
+    }
 
     /* ── Individual / Business ──────────────────── */
     .path-grid {
@@ -603,8 +855,9 @@
       grid-template-columns: 1fr 1fr;
       gap: 20px;
     }
+
     .path-card {
-      background: rgba(255,255,255,0.03);
+      background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--white-8);
       border-radius: var(--r-xl);
       padding: 48px 40px;
@@ -614,29 +867,36 @@
       position: relative;
       overflow: hidden;
     }
+
     .path-card::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 60% 60% at 80% 20%, rgba(0,178,214,0.08) 0%, transparent 70%);
+      background: radial-gradient(ellipse 60% 60% at 80% 20%, rgba(0, 178, 214, 0.08) 0%, transparent 70%);
       opacity: 0;
       transition: opacity 0.4s var(--ease-out);
     }
-    .path-card:hover::before { opacity: 1; }
-    .path-card:hover {
-      border-color: rgba(0,178,214,0.30);
-      transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+
+    .path-card:hover::before {
+      opacity: 1;
     }
+
+    .path-card:hover {
+      border-color: rgba(0, 178, 214, 0.30);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+    }
+
     .path-num {
       font-size: 3.5rem;
       font-weight: 800;
       letter-spacing: -0.05em;
-      color: rgba(255,255,255,0.06);
+      color: rgba(255, 255, 255, 0.06);
       line-height: 1;
       margin-bottom: 24px;
       font-variant-numeric: tabular-nums;
     }
+
     .path-h3 {
       font-size: 1.6rem;
       font-weight: 700;
@@ -644,6 +904,7 @@
       color: var(--white);
       margin-bottom: 10px;
     }
+
     .path-p {
       font-size: 0.9rem;
       color: var(--white-60);
@@ -651,16 +912,18 @@
       margin-bottom: 28px;
       max-width: 340px;
     }
+
     .path-tags {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
       margin-bottom: 32px;
     }
+
     .path-tag {
       font-size: 0.72rem;
       font-weight: 600;
-      color: rgba(255,255,255,0.40);
+      color: rgba(255, 255, 255, 0.40);
       background: var(--white-8);
       border: 1px solid var(--white-8);
       padding: 4px 12px;
@@ -668,6 +931,7 @@
       text-transform: uppercase;
       letter-spacing: 0.1em;
     }
+
     .path-arrow {
       display: flex;
       align-items: center;
@@ -676,8 +940,16 @@
       font-weight: 600;
       color: var(--cyan-lt);
     }
-    .path-arrow svg { width: 18px; height: 18px; transition: transform 0.3s var(--ease-spring); }
-    .path-card:hover .path-arrow svg { transform: translate(4px,-2px); }
+
+    .path-arrow svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.3s var(--ease-spring);
+    }
+
+    .path-card:hover .path-arrow svg {
+      transform: translate(4px, -2px);
+    }
 
     /* ── Stats row ──────────────────────────────── */
     .stats-section {
@@ -685,17 +957,26 @@
       border-top: 1px solid var(--white-8);
       border-bottom: 1px solid var(--white-8);
     }
+
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 0;
     }
+
     .stat-item {
       padding: 0 40px;
       border-right: 1px solid var(--white-8);
     }
-    .stat-item:first-child { padding-left: 0; }
-    .stat-item:last-child { border: none; }
+
+    .stat-item:first-child {
+      padding-left: 0;
+    }
+
+    .stat-item:last-child {
+      border: none;
+    }
+
     .stat-num {
       font-size: 3.2rem;
       font-weight: 800;
@@ -705,10 +986,14 @@
       margin-bottom: 6px;
       font-variant-numeric: tabular-nums;
     }
-    .stat-num span { color: var(--cyan); }
+
+    .stat-num span {
+      color: var(--cyan);
+    }
+
     .stat-label {
       font-size: 0.82rem;
-      color: rgba(255,255,255,0.40);
+      color: rgba(255, 255, 255, 0.40);
       font-weight: 500;
     }
 
@@ -719,6 +1004,7 @@
       gap: 0;
       position: relative;
     }
+
     .steps-grid::before {
       content: '';
       position: absolute;
@@ -728,13 +1014,21 @@
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--white-12) 20%, var(--white-12) 80%, transparent);
     }
-    .step-item { padding: 0 20px; text-align: center; }
+
+    .step-item {
+      padding: 0 20px;
+      text-align: center;
+    }
+
     .step-num {
-      width: 48px; height: 48px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
-      background: rgba(0,178,214,0.12);
-      border: 1px solid rgba(0,178,214,0.25);
-      display: flex; align-items: center; justify-content: center;
+      background: rgba(0, 178, 214, 0.12);
+      border: 1px solid rgba(0, 178, 214, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin: 0 auto 20px;
       font-size: 0.85rem;
       font-weight: 800;
@@ -743,13 +1037,19 @@
       z-index: 1;
       background-color: var(--bg);
     }
+
     .step-title {
       font-size: 0.95rem;
       font-weight: 700;
       color: var(--white);
       margin-bottom: 8px;
     }
-    .step-desc { font-size: 0.85rem; color: var(--white-60); line-height: 1.6; }
+
+    .step-desc {
+      font-size: 0.85rem;
+      color: var(--white-60);
+      line-height: 1.6;
+    }
 
     /* ── Emergency full-bleed ───────────────────── */
     .emergency-section {
@@ -757,21 +1057,24 @@
       position: relative;
       overflow: hidden;
     }
+
     .emergency-section::before {
       content: '';
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 50% 80% at 80% 50%, rgba(192,57,43,0.18) 0%, transparent 60%),
-        linear-gradient(135deg, rgba(127,29,29,0.3) 0%, rgba(8,14,28,0) 60%);
+        radial-gradient(ellipse 50% 80% at 80% 50%, rgba(192, 57, 43, 0.18) 0%, transparent 60%),
+        linear-gradient(135deg, rgba(127, 29, 29, 0.3) 0%, rgba(8, 14, 28, 0) 60%);
       pointer-events: none;
     }
+
     .emergency-inner {
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 80px;
       align-items: center;
     }
+
     .emergency-h2 {
       font-size: clamp(2rem, 3.5vw, 3rem);
       font-weight: 800;
@@ -780,16 +1083,22 @@
       margin-bottom: 14px;
       line-height: 1.1;
     }
+
     .emergency-sub {
       font-size: 1rem;
       color: var(--white-60);
       line-height: 1.7;
       max-width: 500px;
     }
-    .emergency-cta { flex-shrink: 0; text-align: center; }
+
+    .emergency-cta {
+      flex-shrink: 0;
+      text-align: center;
+    }
+
     .emergency-note {
       font-size: 0.74rem;
-      color: rgba(255,255,255,0.30);
+      color: rgba(255, 255, 255, 0.30);
       margin-top: 10px;
     }
 
@@ -798,11 +1107,12 @@
       padding: 48px 0;
       border-top: 1px solid var(--white-8);
     }
+
     .disclaimer-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255,255,255,0.04);
+      background: rgba(255, 255, 255, 0.04);
       border: 1px solid var(--white-8);
       padding: 6px 16px;
       border-radius: 999px;
@@ -810,61 +1120,87 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.14em;
-      color: rgba(255,255,255,0.35);
+      color: rgba(255, 255, 255, 0.35);
       margin-bottom: 16px;
     }
+
     .disclaimer-text {
       font-size: 0.82rem;
-      color: rgba(255,255,255,0.30);
+      color: rgba(255, 255, 255, 0.30);
       line-height: 1.78;
       max-width: 860px;
     }
-    .disclaimer-text strong { color: rgba(255,255,255,0.55); }
+
+    .disclaimer-text strong {
+      color: rgba(255, 255, 255, 0.55);
+    }
 
     /* ── Footer ─────────────────────────────────── */
     .footer {
       padding: 64px 0 32px;
       border-top: 1px solid var(--white-8);
     }
+
     .footer-grid {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 1.5fr;
       gap: 48px;
       margin-bottom: 48px;
     }
-    .footer-logo { margin-bottom: 14px; }
-    .footer-logo img { height: 36px; }
+
+    .footer-logo {
+      margin-bottom: 14px;
+    }
+
+    .footer-logo img {
+      height: 36px;
+    }
+
     .footer-tagline {
       font-size: 0.84rem;
-      color: rgba(255,255,255,0.35);
+      color: rgba(255, 255, 255, 0.35);
       line-height: 1.7;
       max-width: 260px;
     }
+
     .footer-col-title {
       font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.16em;
-      color: rgba(255,255,255,0.30);
+      color: rgba(255, 255, 255, 0.30);
       margin-bottom: 16px;
     }
+
     .footer-col a {
       display: block;
       font-size: 0.84rem;
-      color: rgba(255,255,255,0.50);
+      color: rgba(255, 255, 255, 0.50);
       margin-bottom: 10px;
       transition: color 0.25s;
     }
-    .footer-col a:hover { color: var(--white); }
+
+    .footer-col a:hover {
+      color: var(--white);
+    }
+
     .footer-contact-item {
       display: flex;
       align-items: flex-start;
       gap: 10px;
       font-size: 0.84rem;
-      color: rgba(255,255,255,0.50);
+      color: rgba(255, 255, 255, 0.50);
       margin-bottom: 10px;
     }
-    .footer-contact-item svg { flex-shrink: 0; margin-top: 2px; color: var(--cyan); width: 15px; height: 15px; }
+
+    .footer-contact-item svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: var(--cyan);
+      width: 15px;
+      height: 15px;
+    }
+
     .footer-bottom {
       padding-top: 24px;
       border-top: 1px solid var(--white-8);
@@ -874,58 +1210,150 @@
       flex-wrap: wrap;
       gap: 12px;
     }
+
     .footer-copy {
       font-size: 0.78rem;
-      color: rgba(255,255,255,0.22);
+      color: rgba(255, 255, 255, 0.22);
     }
+
     .footer-legal {
       display: flex;
       gap: 20px;
     }
+
     .footer-legal a {
       font-size: 0.78rem;
-      color: rgba(255,255,255,0.28);
+      color: rgba(255, 255, 255, 0.28);
       transition: color 0.25s;
     }
-    .footer-legal a:hover { color: var(--cyan); }
+
+    .footer-legal a:hover {
+      color: var(--cyan);
+    }
 
     /* ── Mobile ─────────────────────────────────── */
     @media (max-width: 1024px) {
-      .bento-1 { grid-column: 1 / 13; }
-      .bento-2 { grid-column: 1 / 7; }
-      .bento-3 { grid-column: 7 / 13; }
-      .bento-4 { grid-column: 1 / 13; }
-      .bento-1 .bento-inner { grid-template-columns: 1fr; gap: 20px; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .bento-1 {
+        grid-column: 1 / 13;
+      }
+
+      .bento-2 {
+        grid-column: 1 / 7;
+      }
+
+      .bento-3 {
+        grid-column: 7 / 13;
+      }
+
+      .bento-4 {
+        grid-column: 1 / 13;
+      }
+
+      .bento-1 .bento-inner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .nav-mobile-btn { display: flex; }
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-cards { display: none; }
-      .hero-h1 { font-size: clamp(2.4rem, 8vw, 3.2rem); }
-      .bento-grid { grid-template-columns: 1fr; }
-      .bento-1,.bento-2,.bento-3,.bento-4 { grid-column: 1; }
-      .path-grid { grid-template-columns: 1fr; }
-      .stats-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-      .stat-item { border: none; padding: 0; }
-      .steps-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-      .steps-grid::before { display: none; }
-      .emergency-inner { grid-template-columns: 1fr; gap: 32px; }
-      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-      .footer-bottom { flex-direction: column; align-items: flex-start; }
-      .hero { padding: 80px 0 60px; }
-      .section { padding: 72px 0; }
+      .nav-links {
+        display: none;
+      }
+
+      .nav-mobile-btn {
+        display: flex;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-cards {
+        display: none;
+      }
+
+      .hero-h1 {
+        font-size: clamp(2.4rem, 8vw, 3.2rem);
+      }
+
+      .bento-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bento-1,
+      .bento-2,
+      .bento-3,
+      .bento-4 {
+        grid-column: 1;
+      }
+
+      .path-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+
+      .stat-item {
+        border: none;
+        padding: 0;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+
+      .steps-grid::before {
+        display: none;
+      }
+
+      .emergency-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero {
+        padding: 80px 0 60px;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
     }
 
     @media (max-width: 480px) {
-      .stats-grid { grid-template-columns: 1fr; }
-      .steps-grid { grid-template-columns: 1fr; }
-      .trust-divider { display: none; }
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-divider {
+        display: none;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Noise texture overlay -->
@@ -940,7 +1368,8 @@
 
   <!-- Disclaimer bar -->
   <div class="disclaimer-bar" role="banner">
-    <strong>Notice:</strong> VisaRequest is a private, independent consultancy — not affiliated with any government, embassy, or official authority.
+    <strong>Notice:</strong> VisaRequest is a private, independent consultancy — not affiliated with any government,
+    embassy, or official authority.
   </div>
 
   <!-- Floating pill nav -->
@@ -955,11 +1384,19 @@
         <a href="global-to-africa.html">Africa</a>
       </div>
       <a href="emergency.html" class="nav-emergency-btn">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+        </svg>
         Emergency
       </a>
       <button class="nav-mobile-btn" id="mobileMenuBtn" aria-label="Open menu">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
       </button>
     </nav>
   </div>
@@ -980,13 +1417,17 @@
             <span class="accent">Handled.</span>
           </h1>
           <p class="hero-sub reveal reveal-delay-2">
-            We manage the paperwork, documents, and follow-up — for individuals and businesses across South Africa and beyond. Not affiliated with any government or embassy.
+            We manage the paperwork, documents, and follow-up — for individuals and businesses across South Africa and
+            beyond. Not affiliated with any government or embassy.
           </p>
           <div class="hero-cta-row reveal reveal-delay-3">
             <a href="#services" class="btn-pill btn-primary-pill">
               Explore Services
               <span class="btn-pill-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </span>
             </a>
             <a href="emergency.html" class="btn-pill btn-ghost-pill">
@@ -1000,7 +1441,11 @@
           <div class="hero-card-item">
             <div class="hero-card-label">
               <div class="hero-card-icon hci-blue">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 2L11 13" />
+                  <path d="M22 2l-7 20-4-9-9-4 20-7z" />
+                </svg>
               </div>
               Short Stay Visa
             </div>
@@ -1009,7 +1454,11 @@
           <div class="hero-card-item">
             <div class="hero-card-label">
               <div class="hero-card-icon hci-blue">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
               </div>
               Long Stay Visa
             </div>
@@ -1018,17 +1467,25 @@
           <div class="hero-card-item">
             <div class="hero-card-label">
               <div class="hero-card-icon hci-cyan">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                </svg>
               </div>
               Global to Africa
             </div>
-            <span class="hero-card-price">from R 2,600</span>
+            <span class="hero-card-price">from R 3,000</span>
           </div>
           <div class="hero-divider"></div>
           <div class="hero-card-item">
             <div class="hero-card-label">
               <div class="hero-card-icon hci-red">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
               </div>
               Emergency Service
             </div>
@@ -1038,7 +1495,10 @@
             <a href="#services" class="btn-pill btn-primary-pill" style="width:100%;justify-content:space-between;">
               Start Application
               <span class="btn-pill-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </span>
             </a>
           </div>
@@ -1050,28 +1510,40 @@
         <div class="trust-inner reveal">
           <div class="trust-item">
             <div class="trust-check">
-              <svg viewBox="0 0 10 10" fill="none" stroke="#00B2D6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="2 5 4 7 8 3"/></svg>
+              <svg viewBox="0 0 10 10" fill="none" stroke="#00B2D6" stroke-width="2" stroke-linecap="round"
+                aria-hidden="true">
+                <polyline points="2 5 4 7 8 3" />
+              </svg>
             </div>
             Fast turnaround
           </div>
           <div class="trust-divider"></div>
           <div class="trust-item">
             <div class="trust-check">
-              <svg viewBox="0 0 10 10" fill="none" stroke="#00B2D6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="2 5 4 7 8 3"/></svg>
+              <svg viewBox="0 0 10 10" fill="none" stroke="#00B2D6" stroke-width="2" stroke-linecap="round"
+                aria-hidden="true">
+                <polyline points="2 5 4 7 8 3" />
+              </svg>
             </div>
             Dedicated consultant
           </div>
           <div class="trust-divider"></div>
           <div class="trust-item">
             <div class="trust-check">
-              <svg viewBox="0 0 10 10" fill="none" stroke="#00B2D6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="2 5 4 7 8 3"/></svg>
+              <svg viewBox="0 0 10 10" fill="none" stroke="#00B2D6" stroke-width="2" stroke-linecap="round"
+                aria-hidden="true">
+                <polyline points="2 5 4 7 8 3" />
+              </svg>
             </div>
             Pretoria-based drivers
           </div>
           <div class="trust-divider"></div>
           <div class="trust-item">
             <div class="trust-check">
-              <svg viewBox="0 0 10 10" fill="none" stroke="#00B2D6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="2 5 4 7 8 3"/></svg>
+              <svg viewBox="0 0 10 10" fill="none" stroke="#00B2D6" stroke-width="2" stroke-linecap="round"
+                aria-hidden="true">
+                <polyline points="2 5 4 7 8 3" />
+              </svg>
             </div>
             2hr response time
           </div>
@@ -1110,7 +1582,8 @@
       <div class="section-header reveal">
         <span class="eyebrow-tag">Services</span>
         <h2 class="section-h2">Every journey,<br>covered.</h2>
-        <p class="section-sub">Four service tiers designed around your situation - from a weekend trip to an emergency departure tonight.</p>
+        <p class="section-sub">Four service tiers designed around your situation - from a weekend trip to an emergency
+          departure tonight.</p>
       </div>
 
       <div class="bento-grid">
@@ -1121,11 +1594,15 @@
             <div class="bento-inner">
               <div>
                 <div class="bento-icon icon-blue">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M22 2L11 13" />
+                    <path d="M22 2l-7 20-4-9-9-4 20-7z" />
+                  </svg>
                 </div>
                 <div class="bento-label">Short Stay</div>
                 <div class="bento-title">Tourism, business visits &amp; short-term travel</div>
-                <div class="bento-desc">We handle your forms, documents, and appointment booking. Standard or Premium — with provisional bookings, drivers, and dedicated follow-up.</div>
+                <div class="bento-desc">We handle your forms, documents, and appointment booking. Standard or Premium —
+                  with provisional bookings, drivers, and dedicated follow-up.</div>
               </div>
               <div>
                 <div style="margin-bottom:24px;">
@@ -1136,7 +1613,10 @@
                 </div>
                 <a href="short-stay.html" class="bento-link">
                   View packages
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -1147,11 +1627,15 @@
         <div class="bento-2 reveal reveal-delay-1">
           <div class="bento-card">
             <div class="bento-icon icon-blue">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
             </div>
             <div class="bento-label">Long Stay</div>
             <div class="bento-title">Work permits, study visas &amp; residency</div>
-            <div class="bento-desc">Precision documentation for long-term applications. Cover letters, provisional bookings, and dedicated account management.</div>
+            <div class="bento-desc">Precision documentation for long-term applications. Cover letters, provisional
+              bookings, and dedicated account management.</div>
             <div class="bento-footer">
               <div>
                 <div class="bento-price">R 2,900</div>
@@ -1159,7 +1643,10 @@
               </div>
               <a href="long-stay.html" class="bento-link">
                 View
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </a>
             </div>
           </div>
@@ -1169,19 +1656,26 @@
         <div class="bento-3 reveal reveal-delay-1">
           <div class="bento-card">
             <div class="bento-icon icon-cyan">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+              </svg>
             </div>
             <div class="bento-label">Global to Africa</div>
             <div class="bento-title">Any country, any African destination</div>
             <div class="bento-desc">54 nations, each with unique requirements. We know them all.</div>
             <div class="bento-footer">
               <div>
-                <div class="bento-price">R 2,600</div>
+                <div class="bento-price">R 3,000</div>
                 <div class="bento-price-note">Standard · per person</div>
               </div>
               <a href="global-to-africa.html" class="bento-link">
                 View
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </a>
             </div>
           </div>
@@ -1193,11 +1687,14 @@
             <div style="display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;height:100%;">
               <div>
                 <div class="bento-icon icon-red">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                  </svg>
                 </div>
                 <div class="bento-label" style="color:rgba(252,165,165,0.5);">Emergency</div>
                 <div class="bento-title">Need a visa tonight?</div>
-                <div class="bento-desc">Priority processing, immediate consultant response, and urgent document submission. We move when you need to move.</div>
+                <div class="bento-desc">Priority processing, immediate consultant response, and urgent document
+                  submission. We move when you need to move.</div>
               </div>
               <div style="text-align:right;flex-shrink:0;">
                 <div class="bento-price" style="font-size:2.4rem;">R 4,000</div>
@@ -1205,7 +1702,10 @@
                 <a href="emergency.html" class="btn-pill btn-red-pill" style="margin-top:20px;display:inline-flex;">
                   Apply now
                   <span class="btn-pill-icon">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
                   </span>
                 </a>
               </div>
@@ -1223,14 +1723,16 @@
       <div class="section-header reveal">
         <span class="eyebrow-tag">Who are you?</span>
         <h2 class="section-h2">Individual or Business</h2>
-        <p class="section-sub">Our service adapts to your situation. Choose your path and we tailor everything around you.</p>
+        <p class="section-sub">Our service adapts to your situation. Choose your path and we tailor everything around
+          you.</p>
       </div>
 
       <div class="path-grid">
         <a href="short-stay.html?type=individual" class="path-card reveal">
           <div class="path-num">01</div>
           <h3 class="path-h3">Individual</h3>
-          <p class="path-p">Applying for yourself or a family member - tourism, study, work, or residency. We guide you from the first form to the final stamp.</p>
+          <p class="path-p">Applying for yourself or a family member - tourism, study, work, or residency. We guide you
+            from the first form to the final stamp.</p>
           <div class="path-tags">
             <span class="path-tag">Tourism</span>
             <span class="path-tag">Study</span>
@@ -1239,14 +1741,18 @@
           </div>
           <div class="path-arrow">
             Browse individual services
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
           </div>
         </a>
 
         <a href="short-stay.html?type=business" class="path-card reveal reveal-delay-1">
           <div class="path-num">02</div>
           <h3 class="path-h3">Business</h3>
-          <p class="path-p">Managing corporate travel or multiple employee applications? We handle bulk processing, business letters, and VAT-registered documentation at scale.</p>
+          <p class="path-p">Managing corporate travel or multiple employee applications? We handle bulk processing,
+            business letters, and VAT-registered documentation at scale.</p>
           <div class="path-tags">
             <span class="path-tag">Work Visas</span>
             <span class="path-tag">Corporate Travel</span>
@@ -1254,7 +1760,10 @@
           </div>
           <div class="path-arrow">
             Browse business services
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
           </div>
         </a>
       </div>
@@ -1302,13 +1811,17 @@
         <div class="reveal">
           <span class="eyebrow-tag" style="color:#fca5a5;">Urgent travel</span>
           <h2 class="emergency-h2">Need a visa<br>right now?</h2>
-          <p class="emergency-sub">Our Emergency Visa Service is built for exactly this moment. Priority consultant response, fast-tracked processing, and urgent document submission - we move when it matters most.</p>
+          <p class="emergency-sub">Our Emergency Visa Service is built for exactly this moment. Priority consultant
+            response, fast-tracked processing, and urgent document submission - we move when it matters most.</p>
         </div>
         <div class="emergency-cta reveal reveal-delay-1">
           <a href="emergency.html" class="btn-pill btn-red-pill">
             Apply for emergency visa
             <span class="btn-pill-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
             </span>
           </a>
           <p class="emergency-note">R 4,000 per person · 1hr response</p>
@@ -1321,11 +1834,22 @@
   <div class="disclaimer-full" id="disclaimer">
     <div class="container">
       <div class="disclaimer-pill">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="12" />
+          <line x1="12" y1="16" x2="12.01" y2="16" />
+        </svg>
         Important disclaimer
       </div>
       <p class="disclaimer-text">
-        <strong>VisaRequest is a private, independent visa consultancy service.</strong> We are not affiliated with, endorsed by, or connected to any government department, embassy, high commission, consulate, or official visa-issuing authority. Our services are strictly limited to providing advisory guidance and assisting with the preparation and organisation of visa application documentation. All visa decisions are made solely and exclusively at the discretion of the relevant embassy, consulate, or immigration authority. Submitting an application through VisaRequest does not alter, expedite, or influence the outcome of any visa decision. Clients are responsible for ensuring the accuracy of all personal information provided.
+        <strong>VisaRequest is a private, independent visa consultancy service.</strong> We are not affiliated with,
+        endorsed by, or connected to any government department, embassy, high commission, consulate, or official
+        visa-issuing authority. Our services are strictly limited to providing advisory guidance and assisting with the
+        preparation and organisation of visa application documentation. All visa decisions are made solely and
+        exclusively at the discretion of the relevant embassy, consulate, or immigration authority. Submitting an
+        application through VisaRequest does not alter, expedite, or influence the outcome of any visa decision. Clients
+        are responsible for ensuring the accuracy of all personal information provided.
       </p>
     </div>
   </div>
@@ -1338,7 +1862,8 @@
           <div class="footer-logo">
             <img src="logos/logo-DYOdxpw0.webp" alt="VisaRequest" height="36">
           </div>
-          <p class="footer-tagline">Private visa consultancy for individuals and businesses. Not affiliated with any government or embassy.</p>
+          <p class="footer-tagline">Private visa consultancy for individuals and businesses. Not affiliated with any
+            government or embassy.</p>
         </div>
         <div class="footer-col">
           <div class="footer-col-title">Services</div>
@@ -1357,15 +1882,24 @@
         <div class="footer-col">
           <div class="footer-col-title">Contact</div>
           <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
             apply@visarequest.co.za
           </div>
           <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+            </svg>
             +27 (0)12 000 0000
           </div>
           <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+            </svg>
             Pretoria, South Africa
           </div>
         </div>
@@ -1406,4 +1940,5 @@
   </script>
 
 </body>
+
 </html>

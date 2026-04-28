@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Global to Africa Visa Service | VisaRequest | From R 2,600</title>
-  <meta name="description" content="Travelling from anywhere in the world to any African destination? VisaRequest handles your Africa visa application with expert knowledge of each country's requirements. From R 2,600.">
+  <title>Global to Africa Visa Service | VisaRequest | From R 3,000</title>
+  <meta name="description" content="Travelling from anywhere in the world to any African destination? VisaRequest handles your Africa visa application with expert knowledge of each country's requirements. From R 3,000.">
   <link rel="icon" href="logos/logo-DYOdxpw0.webp" type="image/webp">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -60,7 +60,7 @@
       <h1>Global to Africa Visa Service</h1>
       <p>Travelling from anywhere in the world to any African destination? We navigate the unique and often complex visa requirements of every African country - so you arrive prepared, not surprised.</p>
       <div style="margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-        <a href="#package" class="btn btn-primary btn-lg">View Package - R 2,600</a>
+        <a href="#package" class="btn btn-primary btn-lg">View Package - R 3,000</a>
         <a href="#apply" class="btn btn-secondary btn-lg">Apply Now</a>
       </div>
     </div>
@@ -147,8 +147,31 @@
           <div class="pricing-badge">Standard Package</div>
           <h3>Global to Africa Visa Service</h3>
           <p style="font-size:.9rem;color:var(--text-lt);margin-bottom:8px;">Full support for individuals or businesses seeking visa assistance for travel to any African destination.</p>
-          <div class="price">R 2,600</div>
+          <div class="price" id="zar-price">R 3,000</div>
           <div class="price-note">per person · all-inclusive</div>
+
+          <!-- Currency converter -->
+          <div style="margin:14px 0 4px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+            <label for="currency-select" style="font-size:.8rem;font-weight:600;color:var(--text-lt);white-space:nowrap;">See price in:</label>
+            <select id="currency-select" style="flex:1;min-width:140px;padding:7px 12px;border:1.5px solid var(--gray-200);border-radius:8px;font-size:.85rem;color:var(--text);font-family:'Inter',sans-serif;cursor:pointer;outline:none;">
+              <option value="ZAR">ZAR - South African Rand</option>
+              <option value="USD">USD - US Dollar</option>
+              <option value="EUR">EUR - Euro</option>
+              <option value="GBP">GBP - British Pound</option>
+              <option value="AUD">AUD - Australian Dollar</option>
+              <option value="CAD">CAD - Canadian Dollar</option>
+              <option value="KES">KES - Kenyan Shilling</option>
+              <option value="NGN">NGN - Nigerian Naira</option>
+              <option value="GHS">GHS - Ghanaian Cedi</option>
+              <option value="EGP">EGP - Egyptian Pound</option>
+              <option value="AED">AED - UAE Dirham</option>
+              <option value="INR">INR - Indian Rupee</option>
+              <option value="CNY">CNY - Chinese Yuan</option>
+            </select>
+          </div>
+          <div id="converted-price" style="font-size:.82rem;color:var(--cyan-deep);font-weight:600;min-height:20px;margin-bottom:2px;"></div>
+          <div style="font-size:.72rem;color:var(--gray-400);margin-bottom:12px;">Indicative rate · exact rate applied at payment</div>
+
           <div class="pricing-divider"></div>
           <ul class="pricing-features">
             <li><span class="check">✔</span> Consultation to determine the right visa type (tourist, business, work)</li>
@@ -362,5 +385,45 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    // Fixed exchange rates against ZAR (updated April 2025)
+    const rates = {
+      ZAR: 1,
+      USD: 0.0545,
+      EUR: 0.0502,
+      GBP: 0.0428,
+      AUD: 0.0840,
+      CAD: 0.0753,
+      KES: 7.05,
+      NGN: 86.20,
+      GHS: 0.820,
+      EGP: 2.68,
+      AED: 0.200,
+      INR: 4.56,
+      CNY: 0.395,
+    };
+
+    const symbols = {
+      ZAR:'R', USD:'$', EUR:'€', GBP:'£',
+      AUD:'A$', CAD:'C$', KES:'KSh', NGN:'₦',
+      GHS:'GH₵', EGP:'EGP ', AED:'AED ', INR:'₹', CNY:'¥',
+    };
+
+    const zarAmount = 3000;
+    const select = document.getElementById('currency-select');
+    const converted = document.getElementById('converted-price');
+
+    function updateConversion() {
+      const cur = select.value;
+      if (cur === 'ZAR') { converted.textContent = ''; return; }
+      const amount = zarAmount * rates[cur];
+      const formatted = amount >= 1000
+        ? amount.toLocaleString('en', {minimumFractionDigits: 0, maximumFractionDigits: 0})
+        : amount.toLocaleString('en', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      converted.textContent = `≈ ${symbols[cur]}${formatted} ${cur}`;
+    }
+
+    select.addEventListener('change', updateConversion);
+  </script>
 </body>
 </html>
