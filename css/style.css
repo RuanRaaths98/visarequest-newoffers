@@ -448,19 +448,20 @@ ul { list-style: none; }
   box-shadow: 0 12px 40px rgba(0,178,214,.18);
 }
 .path-icon {
-  width: 76px; height: 76px;
+  width: 72px; height: 72px;
   background: var(--cyan-pale);
   border: 2px solid rgba(0,178,214,.2);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   margin: 0 auto 22px;
-  font-size: 2.2rem;
   transition: all var(--transition);
 }
+.path-icon svg { color: var(--cyan-deep); transition: color var(--transition); }
 .path-card:hover .path-icon {
   background: var(--cyan);
   border-color: var(--cyan);
 }
+.path-card:hover .path-icon svg { color: var(--white); }
 .path-card h3 { font-size: 1.45rem; margin-bottom: 10px; }
 .path-card p { color: var(--text-lt); font-size: .92rem; margin-bottom: 22px; line-height: 1.6; }
 .path-link {
@@ -559,7 +560,15 @@ ul { list-style: none; }
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
-.feature-icon { font-size: 2rem; margin-bottom: 14px; }
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.08);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.10);
+}
 .feature h4 { color: var(--white); font-size: 1rem; margin-bottom: 8px; }
 .feature p { color: rgba(255,255,255,.70); font-size: .88rem; line-height: 1.65; }
 
