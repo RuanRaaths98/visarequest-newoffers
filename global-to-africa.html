@@ -147,7 +147,8 @@
           <div class="pricing-badge">Standard Package</div>
           <h3>Global to Africa Visa Service</h3>
           <p style="font-size:.9rem;color:var(--text-lt);margin-bottom:8px;">Full support for individuals or businesses seeking visa assistance for travel to any African destination.</p>
-          <div class="price" id="zar-price">R 3,000</div>
+          <div class="price" id="main-price" style="transition:all .25s ease;">R 3,000</div>
+          <div id="zar-note" style="font-size:.78rem;color:var(--cyan-deep);font-weight:600;min-height:18px;margin-top:2px;"></div>
           <div class="price-note">per person · all-inclusive</div>
 
           <!-- Currency converter -->
@@ -169,7 +170,6 @@
               <option value="CNY">CNY - Chinese Yuan</option>
             </select>
           </div>
-          <div id="converted-price" style="font-size:.82rem;color:var(--cyan-deep);font-weight:600;min-height:20px;margin-bottom:2px;"></div>
           <div style="font-size:.72rem;color:var(--gray-400);margin-bottom:12px;">Indicative rate · exact rate applied at payment</div>
 
           <div class="pricing-divider"></div>
@@ -411,16 +411,22 @@
 
     const zarAmount = 3000;
     const select = document.getElementById('currency-select');
-    const converted = document.getElementById('converted-price');
+    const mainPrice = document.getElementById('main-price');
+    const zarNote = document.getElementById('zar-note');
 
     function updateConversion() {
       const cur = select.value;
-      if (cur === 'ZAR') { converted.textContent = ''; return; }
+      if (cur === 'ZAR') {
+        mainPrice.textContent = 'R 3,000';
+        zarNote.textContent = '';
+        return;
+      }
       const amount = zarAmount * rates[cur];
       const formatted = amount >= 1000
         ? amount.toLocaleString('en', {minimumFractionDigits: 0, maximumFractionDigits: 0})
         : amount.toLocaleString('en', {minimumFractionDigits: 2, maximumFractionDigits: 2});
-      converted.textContent = `≈ ${symbols[cur]}${formatted} ${cur}`;
+      mainPrice.textContent = `${symbols[cur]}${formatted}`;
+      zarNote.textContent = '= R 3,000 ZAR';
     }
 
     select.addEventListener('change', updateConversion);
