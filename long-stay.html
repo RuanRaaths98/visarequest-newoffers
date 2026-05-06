@@ -174,14 +174,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-deep)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg>
           </div>
           <div>
-            <div style="font-size:.9rem;font-weight:700;color:var(--navy);font-family:'Plus Jakarta Sans',sans-serif;">Not sure which to start with? You can upgrade anytime.</div>
-            <div style="font-size:.83rem;color:var(--text-lt);margin-top:3px;">Started on Standard and changed your mind? Just pay the <strong style="color:var(--navy);">R 900 difference</strong> and we'll move you to Premium - your application stays on track.</div>
+            <div style="font-size:.9rem;font-weight:700;color:var(--navy);font-family:'Plus Jakarta Sans',sans-serif;">Not sure where to start? No stress, you can upgrade anytime.</div>
+            <div style="font-size:.83rem;color:var(--text-lt);margin-top:3px;">Start on Standard and want to move up? Simply pay the <strong style="color:var(--navy);">R700 difference</strong>, and we'll upgrade you to Premium.</div>
           </div>
         </div>
-        <a href="#apply" style="display:inline-flex;align-items:center;gap:8px;padding:10px 22px;background:var(--cyan);color:var(--white);border-radius:var(--radius);font-size:.85rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap;transition:all .25s;flex-shrink:0;" onmouseover="this.style.background='var(--cyan-lt)'" onmouseout="this.style.background='var(--cyan)'">
+        <button type="button" onclick="document.getElementById('upgrade-modal').style.display='flex'" style="display:inline-flex;align-items:center;gap:8px;padding:10px 22px;background:var(--cyan);color:var(--white);border-radius:var(--radius);font-size:.85rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap;transition:all .25s;flex-shrink:0;border:none;cursor:pointer;" onmouseover="this.style.background='var(--cyan-lt)'" onmouseout="this.style.background='var(--cyan)'">
           Upgrade to Premium
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+        </button>
       </div>
 
     </div>
@@ -305,7 +305,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <label>Business Address <span class="required">*</span></label>
               <textarea name="business_address" placeholder="Street address, suburb, city, postal code" style="min-height:80px;"></textarea>
             </div>
-            <div class="form-group full business-only" style="display:none;">
+            <div class="form-group full">
               <label style="margin-bottom:10px;">Do you also need help with any of the following? <span style="font-weight:400;color:var(--text-lt);">(optional)</span></label>
               <div class="checkbox-group">
                 <label class="checkbox-label">
@@ -393,7 +393,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h5>Contact</h5>
           <div class="footer-contact-item">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            apply@visarequest.co.za
+            admin@visarequest.co.za
           </div>
           <div class="footer-contact-item">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
@@ -410,6 +410,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </footer>
+
+  <!-- Upgrade to Premium Modal -->
+  <div id="upgrade-modal" style="display:none;position:fixed;inset:0;background:rgba(10,20,40,.55);z-index:9999;align-items:center;justify-content:center;padding:20px;" onclick="if(event.target===this)this.style.display='none'">
+    <div style="background:#fff;border-radius:16px;padding:36px 32px;max-width:440px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.18);position:relative;">
+      <button type="button" onclick="document.getElementById('upgrade-modal').style.display='none'" style="position:absolute;top:16px;right:16px;background:none;border:none;cursor:pointer;color:#8898aa;font-size:1.4rem;line-height:1;" aria-label="Close">&times;</button>
+      <div style="margin-bottom:20px;">
+        <span style="display:inline-block;background:var(--cyan-pale);color:var(--cyan);border:1px solid var(--cyan);padding:4px 14px;border-radius:999px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:10px;">Upgrade Request</span>
+        <h3 style="font-size:1.25rem;font-weight:800;color:var(--navy);margin:0 0 6px;font-family:'Plus Jakarta Sans',sans-serif;">Upgrade to Premium</h3>
+        <p style="font-size:.87rem;color:var(--text-lt);margin:0;">We'll get you switched over quickly. Just fill in your details below.</p>
+      </div>
+      <form action="https://formspree.io/f/xaqvwgnw" method="POST" style="display:flex;flex-direction:column;gap:14px;">
+        <input type="hidden" name="service" value="Long Stay Visa - Upgrade Request">
+        <div>
+          <label style="display:block;font-size:.82rem;font-weight:600;color:var(--navy);margin-bottom:5px;font-family:'Plus Jakarta Sans',sans-serif;">First Name <span style="color:#e53e3e;">*</span></label>
+          <input type="text" name="first_name" placeholder="Your first name" required style="width:100%;padding:10px 14px;border:1.5px solid var(--gray-200);border-radius:10px;font-size:.9rem;font-family:'Plus Jakarta Sans',sans-serif;outline:none;box-sizing:border-box;transition:border .2s;" onfocus="this.style.borderColor='var(--cyan)'" onblur="this.style.borderColor='var(--gray-200)'">
+        </div>
+        <div>
+          <label style="display:block;font-size:.82rem;font-weight:600;color:var(--navy);margin-bottom:5px;font-family:'Plus Jakarta Sans',sans-serif;">Surname <span style="color:#e53e3e;">*</span></label>
+          <input type="text" name="surname" placeholder="Your surname" required style="width:100%;padding:10px 14px;border:1.5px solid var(--gray-200);border-radius:10px;font-size:.9rem;font-family:'Plus Jakarta Sans',sans-serif;outline:none;box-sizing:border-box;transition:border .2s;" onfocus="this.style.borderColor='var(--cyan)'" onblur="this.style.borderColor='var(--gray-200)'">
+        </div>
+        <div>
+          <label style="display:block;font-size:.82rem;font-weight:600;color:var(--navy);margin-bottom:5px;font-family:'Plus Jakarta Sans',sans-serif;">Email Address <span style="color:#e53e3e;">*</span></label>
+          <input type="email" name="email" placeholder="your@email.com" required style="width:100%;padding:10px 14px;border:1.5px solid var(--gray-200);border-radius:10px;font-size:.9rem;font-family:'Plus Jakarta Sans',sans-serif;outline:none;box-sizing:border-box;transition:border .2s;" onfocus="this.style.borderColor='var(--cyan)'" onblur="this.style.borderColor='var(--gray-200)'">
+        </div>
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:12px 14px;background:var(--off-white);border:1.5px solid var(--gray-200);border-radius:10px;">
+          <input type="checkbox" name="wants_upgrade" value="Yes, I want to upgrade to Premium" checked style="width:17px;height:17px;flex-shrink:0;margin-top:2px;accent-color:#00B2D6;cursor:pointer;">
+          <span style="font-size:.85rem;color:var(--navy);font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;">Yes, I want to upgrade to Premium</span>
+        </label>
+        <button type="submit" style="padding:12px 20px;background:var(--cyan);color:#fff;border:none;border-radius:10px;font-size:.9rem;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;cursor:pointer;transition:background .2s;margin-top:4px;" onmouseover="this.style.background='var(--cyan-lt)'" onmouseout="this.style.background='var(--cyan)'">
+          Send Upgrade Request →
+        </button>
+      </form>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

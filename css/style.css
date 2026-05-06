@@ -696,14 +696,13 @@ ul { list-style: none; }
 .form-group textarea { resize: vertical; min-height: 110px; }
 .form-group select { cursor: pointer; }
 
-/* Checkboxes */
-.form-group input[type="checkbox"] {
-  width: 17px;
-  height: 17px;
-  flex-shrink: 0;
-  cursor: pointer;
-  accent-color: #00B2D6;
-  margin-top: 3px;
+/* Checkboxes — custom implementation to override the global .form-group input rule */
+.checkbox-group input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
 }
 .checkbox-label {
   display: flex;
@@ -711,13 +710,37 @@ ul { list-style: none; }
   gap: 10px;
   font-weight: 400 !important;
   cursor: pointer;
-  padding: 2px 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background .15s;
+}
+.checkbox-label:hover { background: rgba(0,178,214,.07); }
+.checkbox-label::before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border: 2px solid #cbd5e0;
+  border-radius: 5px;
+  background: #fff;
+  margin-top: 1px;
+  transition: border-color .15s, background .15s;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 11px 11px;
+}
+.checkbox-label:has(input:checked)::before {
+  border-color: #00B2D6;
+  background-color: #00B2D6;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 10'%3E%3Cpolyline points='1,5 4.5,8.5 11,1' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 .checkbox-group {
   background: var(--off-white);
   border: 1.5px solid var(--gray-200);
   border-radius: 10px;
-  padding: 18px 20px;
+  padding: 10px 8px;
   display: flex;
   flex-direction: column;
   gap: 10px;
