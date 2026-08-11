@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function redirectToThankYou(form) {
-  const redirectUrl = form.dataset.thankYouUrl || form.querySelector('[name="_next"]')?.value || 'thank-you.html';
+  const redirectUrl = form.dataset.thankYouUrl || form.querySelector('[name="_next"]')?.value || 'https://visa.visa-request.co.za/thank-you';
   window.location.href = redirectUrl;
 }
 
