@@ -6,6 +6,7 @@
     { "source": "/long-stay", "destination": "/long-stay.html" },
     { "source": "/emergency", "destination": "/emergency.html" },
     { "source": "/global-to-africa", "destination": "/global-to-africa.html" },
+    { "source": "/thank-you", "destination": "/thank-you.html" },
     { "source": "/privacy", "destination": "/privacy.html" },
     { "source": "/terms", "destination": "/terms.html" }
   ],

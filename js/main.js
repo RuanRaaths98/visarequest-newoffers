@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
           headers: { 'Accept': 'application/json' }
         });
         if (res.ok) {
-          showSuccess(form);
+          redirectToThankYou(form);
         } else {
           showError(form);
         }
@@ -93,6 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+function redirectToThankYou(form) {
+  const redirectUrl = form.dataset.thankYouUrl || form.querySelector('[name="_next"]')?.value || 'thank-you.html';
+  window.location.href = redirectUrl;
+}
 
 function showSuccess(form) {
   const msg = document.createElement('div');
